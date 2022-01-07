@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>mHappy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./index.css"></link>
+<body>
+
+<div id = "app"></div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function(){
+        var list = [
+            { h : '201' , t : "小鱼捉迷藏"},
+            { h : '218' , t : "找呀，找朋友"},
+            { h : '220' , t : "大老虎"},
+            { h : '202' , t : "那是你的家吗"},
+            { h : '203' , t : "谁在说话呢"},
+            { h : '204' , t : "小笨熊的放大镜"},
+            { h : '205' , t : "一年12个月"},
+            { h : '227' , t : "汽车轮子为什么是圆的"},
+            { h : '206' , t : "和大人一起读"},
+            { h : '207' , t : "和大人一起读2"},
+            { h : '209' , t : "看植物多好玩"},
+            { h : '210' , t : "鲁滨逊漂流记"},
+            { h : '203' , t : "谁在说话呢"},
+            { h : '290' , t : "生活魔法"},
+            { h : '289', t: '恐龙当家'},
+            { h : '291', t: '天气是个捣蛋鬼'},
+            { h : '216' , t : "小心，大白鲨"},
+            { h : '229' , t : "斑马身上的条纹有什么用"},
+        ]
+        var html = "" ;
+        list.forEach( function ( item , index ){
+            var icon =  index % 2 == 0 ? "⭐️" : "❤️"
+            html+= '<a href='+ 'http://zaojiao.xiaobenxiong.net/LevlRead/LevelReadCate//ItemTextReadList?ID='+ item.h + '>' +
+                '<span>' + icon +'</span>'  +
+                (index+1) + '.  ' + item.t +  '</a>'
+        })
+
+
+        $("#app").html(
+            html
+        )
+    });
+
+</script>
+</html>
